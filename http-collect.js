@@ -9,6 +9,8 @@ http.get(process.argv[2], (res) => {
     }))
 });
 
+//Write it this way in the first time
+
 // http.get(process.argv[2], (res) => {
 //     res.setEncoding('utf8');
 

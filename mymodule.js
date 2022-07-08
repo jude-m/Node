@@ -14,5 +14,4 @@ module.exports = function (dir, ext, callback) {
         });
         return callback(null, data);
     });
-
 }
