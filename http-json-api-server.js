@@ -20,7 +20,7 @@ const server = http.createServer(function (req, res) {
             res.end(JSON.stringify(obj))
         }
 
-        if (reqUrl.pathname === '/api/unixtime') {
+        else if (reqUrl.pathname === '/api/unixtime') {
             let date = new Date(reqUrl.query.iso)
 
             const obj = {
@@ -31,6 +31,8 @@ const server = http.createServer(function (req, res) {
                 'Content-Type': 'application/json'
             })
             res.end(JSON.stringify(obj))
+        } else {
+            res.end("Error")
         }
     } else {
         res.end("Only accepting GET requests!")
